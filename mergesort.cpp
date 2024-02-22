@@ -17,12 +17,12 @@ void merge(int A[], int p, int q, int r, int *count)
     for (int i = 0; i < m; i++)
     {
         left[i] = A[p + i];
-        cout << left[i] << " ";
+        //cout << left[i] << " ";
     }
     for (int i = 0; i < n; i++)
     {
         right[i] = A[q + i + 1];
-        cout << right[i] << " ";
+        //cout << right[i] << " ";
     }
 
     // infinite values
@@ -62,7 +62,7 @@ int main()
 {
     cout << "Hello World";
 
-    for (int i = 1; i < 8;i++){
+    /*for (int i = 1; i < 8;i++){
         string path = "./random/" + to_string(i) + ".txt";
 
         cout << "File: " << path << endl;
@@ -72,18 +72,34 @@ int main()
             cout << "Error opening file";
         }
 
-        int num;
-        
-    };
-        
+        // Input from file
+        int X[100];
+        for (int i = 0; i < 100; i++) {
+            myFile >> X[i];
+        }
+        for (int i = 0; i < 100; i++) {
+            //cout << X[i] ;
+        }
 
-    int A[5] = {5, 3, 2, 4, 1};
+        int *count;
+        count = 0;
+        mergesort(X, 0, 100, count);
+
+        int num;
+        cout << "SORTED: ";
+        for (int i = 0; i < 5; i++)
+        {
+            cout << X[i] << ", ";
+        }
+    };*/
+
+    int A[10] = {1, 5, 4, 2, 3, 10, 7, 9, 6, 8};
     int *count;
     count = 0;
-    mergesort(A, 0, 4, count);
+    mergesort(A, 0, 10, count);
 
     cout << "SORTED: ";
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 10; i++)
     {
         cout << A[i] << ", ";
     }

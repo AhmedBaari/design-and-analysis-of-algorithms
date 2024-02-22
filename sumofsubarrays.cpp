@@ -4,19 +4,19 @@ using namespace std;
 /*
 s = current sum
 k = current element
-r = remaining sum
-X --> Mask Array
-W --> Subset Array
+r = remaining sum 
+X --> Mask Array [1,1,0,0]
+W --> Subset Array [1,4,3,2]
 */
 
 void sumofsub(int W[], int X[], int current_sum,int k,int remaining_sum, int target_sum) {
 	
 	/* GENERATING LEFT CHILD */
-	X[k] = 1;
+	X[k] = 1; // [1,0,0,0]
 	
 	// Will adding this element give us the target sum?
-	if (current_sum + W[k] == target_sum) {
-		for( int i = 0 ; i < k+1; i++ ) {
+	if (current_sum + W[k] == target_sum) { // 0 + 1 = 5 ??
+		for( int i = 0 ; i < k+1; i++ ) { // It is a solution!!
 			cout << X[i] << "-";
 		}
 		cout << endl;
@@ -41,8 +41,8 @@ void sumofsub(int W[], int X[], int current_sum,int k,int remaining_sum, int tar
 
 int main () {
 
-	int W[4] = {1,4,3,2};
-	int X[4] = {0,0,0,0};
+	int W[4] = {1,4,3,2}; // Main Array
+	int X[4] = {0,0,0,0}; // Mask Array
 	int sum = 5;
 
 	// Print the array
